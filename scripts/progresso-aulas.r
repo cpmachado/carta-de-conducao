@@ -28,7 +28,7 @@ grid(
   col = "gray",
   lwd = 1
 )
-lines(dias, codigo_amarelas, col = "yellow")
+lines(dias, codigo_amarelas, col = "yellow3")
 lines(dias, codigo_verdes, col = "green")
 lines(dias, conducao, col = "blue")
 lines(dias, simulador, col = "orange")
@@ -41,12 +41,12 @@ legend(
     "Simulador(Primeiras 8)",
     "Condução"
   ),
-  col = c("green", "yellow", "red", "orange", "blue"),
+  col = c("green", "yellow3", "red", "orange", "blue"),
   lty = 1,
   lwd = 1
 )
 abline(h = 32, col = "blue", lty = 2)
 abline(h = 28, col = "red", lty = 2)
-abline(h = 23, col = "yellow", lty = 2)
+abline(h = 23, col = "yellow3", lty = 2)
 abline(h = 8, col = "orange", lty = 2)
 abline(h = 7, col = "green", lty = 2)
