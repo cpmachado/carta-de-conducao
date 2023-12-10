@@ -19,7 +19,7 @@ png("progresso.png",
 )
 plot(dias, codigo,
   type = "l", ylim = c(0, 40), xaxs = "i", yaxs = "i",
-  xlab = "dia", ylab = "Nro aulas de Código", lty = 1,
+  xlab = "dia", ylab = "Nro de aulas", lty = 1,
   col = "red"
 )
 grid(
