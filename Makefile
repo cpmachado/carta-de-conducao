@@ -4,4 +4,4 @@ lint:
 	Rscript -e 'library(lintr);lint_dir(".")'
 style:
 	Rscript -e 'library(styler);style_dir(".")'
-.PHONY: lint style
+.PHONY: lint style progresso.png

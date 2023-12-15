@@ -40,14 +40,14 @@ grid(
 
 # Linhas do código
 lines(
-  dias[codigo <= 7],
-  codigo[codigo <= 7],
+  dias[codigo < 8],
+  codigo[codigo < 8],
   col = "green",
   type = "s"
 )
 lines(
-  dias[codigo >= 7 & codigo <= 23],
-  codigo[codigo >= 7 & codigo <= 23],
+  dias[codigo >= 7 & codigo < 24],
+  codigo[codigo >= 7 & codigo < 24],
   col = "yellow3",
   type = "s"
 )
@@ -68,14 +68,14 @@ lines(
   col = "orange",
   type = "s"
 )
-lines(dias[conducao <= 8 & dias >= Sys.Date()],
-  conducao[conducao <= 8 & dias >= Sys.Date()],
+lines(dias[conducao <= 8],
+  conducao[conducao <= 8],
   col = "orange", lty = 2,
   type = "s"
 )
 lines(
-  dias[conducao >= 8],
-  conducao[conducao >= 8],
+  dias[conducao > 8],
+  conducao[conducao > 8],
   col = "blue",
   type = "s"
 )
