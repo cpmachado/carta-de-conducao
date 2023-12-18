@@ -63,21 +63,22 @@ abline(h = 28, col = "red", lty = 2)
 
 # Linhas da condução
 lines(
-  dias[conducao <= 8 & dias <= Sys.Date()],
-  conducao[conducao <= 8 & dias <= Sys.Date()],
+  dias[conducao <= 8],
+  conducao[conducao <= 8],
   col = "orange",
   type = "s"
 )
-lines(dias[conducao <= 8],
-  conducao[conducao <= 8],
-  col = "orange", lty = 2,
+lines(
+  dias[conducao >= 8 & dias <= Sys.Date()],
+  conducao[conducao >= 8 &  dias<= Sys.Date()],
+  col = "blue",
   type = "s"
 )
 lines(
-  dias[conducao > 8],
-  conducao[conducao > 8],
+  dias[conducao >= 8 & dias >= Sys.Date()],
+  conducao[conducao >= 8 & dias >= Sys.Date()],
   col = "blue",
-  type = "s"
+  type = "s", lty=2
 )
 abline(h = 8, col = "orange", lty = 2)
 abline(h = 32, col = "blue", lty = 2)
