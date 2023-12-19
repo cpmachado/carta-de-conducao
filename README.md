@@ -4,12 +4,12 @@ As minhas notas e progresso enquanto tiro a carta de condução.
 
 ## Progresso
 
-- Código da estrada
-    - [ ] aulas
-    - [ ] exame
-- Condução
-    - [ ] aulas
-    - [ ] exame
+| Categorias | Progresso | Alvo | Relativo | Completo |
+| :--------- | --------: | ---: | -------: | :------: |
+| Código     | 23        | 28   | 75.0%    | FALSE    |
+| Condução   | 8         | 32   | 25.0%    | FALSE    |
+
+Média de progresso: 50.0%
 
 ## Gráfico
 

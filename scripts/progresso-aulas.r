@@ -40,9 +40,9 @@ grid(
 
 # Linhas do código
 lines(
-  dias[codigo < 8],
-  codigo[codigo < 8],
-  col = "green",
+  dias[codigo >= 23],
+  codigo[codigo >= 23],
+  col = "red",
   type = "s"
 )
 lines(
@@ -52,9 +52,9 @@ lines(
   type = "s"
 )
 lines(
-  dias[codigo >= 23],
-  codigo[codigo >= 23],
-  col = "red",
+  dias[codigo < 8],
+  codigo[codigo < 8],
+  col = "green",
   type = "s"
 )
 abline(h = 7, col = "green", lty = 2)
@@ -63,14 +63,8 @@ abline(h = 28, col = "red", lty = 2)
 
 # Linhas da condução
 lines(
-  dias[conducao <= 8],
-  conducao[conducao <= 8],
-  col = "orange",
-  type = "s"
-)
-lines(
   dias[conducao >= 8 & dias <= Sys.Date()],
-  conducao[conducao >= 8 &  dias<= Sys.Date()],
+  conducao[conducao >= 8 & dias <= Sys.Date()],
   col = "blue",
   type = "s"
 )
@@ -78,9 +72,16 @@ lines(
   dias[conducao >= 8 & dias >= Sys.Date()],
   conducao[conducao >= 8 & dias >= Sys.Date()],
   col = "blue",
-  type = "s", lty=2
+  type = "s", lty = 2
+)
+lines(
+  dias[conducao <= 8],
+  conducao[conducao <= 8],
+  col = "orange",
+  type = "s"
 )
 abline(h = 8, col = "orange", lty = 2)
+abline(h = 16, col = "black", lty = 2)
 abline(h = 32, col = "blue", lty = 2)
 
 legend(
