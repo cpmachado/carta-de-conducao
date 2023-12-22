@@ -69,8 +69,8 @@ lines(
   type = "s"
 )
 lines(
-  dias[conducao >= 8 & dias >= Sys.Date()],
-  conducao[conducao >= 8 & dias >= Sys.Date()],
+  dias[conducao >= 8],
+  conducao[conducao >= 8],
   col = "blue",
   type = "s", lty = 2
 )
@@ -83,6 +83,7 @@ lines(
 abline(h = 8, col = "orange", lty = 2)
 abline(h = 16, col = "black", lty = 2)
 abline(h = 32, col = "blue", lty = 2)
+abline(v = as.Date("2023-12-31"), col = "black", lty = 2)
 
 legend(
   x = "left",
