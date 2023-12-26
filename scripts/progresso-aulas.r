@@ -39,51 +39,54 @@ grid(
 )
 
 # Linhas do código
-lines(
-  dias[codigo >= 23],
-  codigo[codigo >= 23],
-  col = "red",
-  type = "s"
+polygon(
+  x = c(
+    min(dias[codigo >= 7 & codigo < 24]),
+    dias[codigo >= 7 & codigo < 24],
+    max(dias[codigo >= 7 & codigo < 24])
+  ),
+  y = c(0, codigo[codigo >= 7 & codigo < 24], 0),
+  col = adjustcolor("yellow3", alpha.f = 0.5)
 )
-lines(
-  dias[codigo >= 7 & codigo < 24],
-  codigo[codigo >= 7 & codigo < 24],
-  col = "yellow3",
-  type = "s"
+polygon(
+  x = c(
+    min(dias[codigo <= 8]),
+    dias[codigo <= 8],
+    max(dias[codigo <= 8])
+  ),
+  y = c(0, codigo[codigo <= 8], 0),
+  col = adjustcolor("green", alpha.f = 0.5)
 )
-lines(
-  dias[codigo < 8],
-  codigo[codigo < 8],
-  col = "green",
-  type = "s"
+
+# Linhas da condução
+polygon(
+  x = c(
+    min(dias[conducao >= 8]),
+    dias[conducao >= 8],
+    max(dias[conducao >= 8])
+  ),
+  y = c(0, conducao[conducao >= 8], 0),
+  col = adjustcolor("blue", alpha.f = 0.5)
 )
+polygon(
+  x = c(
+    min(dias[conducao <= 8]),
+    dias[conducao <= 8],
+    max(dias[conducao <= 8])
+  ),
+  y = c(0, conducao[conducao <= 8], 0),
+  col = adjustcolor("orange", alpha.f = 0.5)
+)
+
+# linhas guia
 abline(h = 7, col = "green", lty = 2)
 abline(h = 23, col = "yellow3", lty = 2)
 abline(h = 28, col = "red", lty = 2)
-
-# Linhas da condução
-lines(
-  dias[conducao >= 8 & dias <= Sys.Date()],
-  conducao[conducao >= 8 & dias <= Sys.Date()],
-  col = "blue",
-  type = "s"
-)
-lines(
-  dias[conducao >= 8],
-  conducao[conducao >= 8],
-  col = "blue",
-  type = "s", lty = 2
-)
-lines(
-  dias[conducao <= 8],
-  conducao[conducao <= 8],
-  col = "orange",
-  type = "s"
-)
 abline(h = 8, col = "orange", lty = 2)
-abline(h = 16, col = "black", lty = 2)
 abline(h = 32, col = "blue", lty = 2)
-abline(v = as.Date("2023-12-31"), col = "black", lty = 2)
+abline(v = as.Date(Sys.Date()), col = "black", lty = 2)
+abline(h = max(codigo[dias <= as.Date(Sys.Date())]), col = "black", lty = 2)
+abline(h = max(conducao[dias <= as.Date(Sys.Date())]), col = "black", lty = 2)
 
 legend(
   x = "left",
@@ -92,9 +95,10 @@ legend(
     "Código Amarelas",
     "Código Vermelhas",
     "Simulador",
-    "Condução"
+    "Condução",
+    "Actual"
   ),
-  col = c("green", "yellow3", "red", "orange", "blue"),
+  col = c("green", "yellow3", "red", "orange", "blue", "black"),
   lty = 1,
   lwd = 1
 )
