@@ -18,8 +18,8 @@ png(file.path("res", "conducao.png"),
 )
 
 plot(dias, conducao,
-  ylim = c(0, 34),
-  xaxs = "i", yaxs = "i", xlab = "dia", ylab = "N",
+  ylim = c(0, 34), xaxs = "i", yaxs = "i",
+  xlab = "dia", ylab = "N", main = "Aulas de Condução"
 )
 grid(
   nx = diff_dias,
