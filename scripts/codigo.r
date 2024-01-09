@@ -1,7 +1,11 @@
 df <- read.csv(file.path("data", "aulas.csv"))
 
-dias <- c(as.Date(df$dia[df$codigo > 0]), as.Date(Sys.Date()) + 30)
-codigo <- cumsum(c(df$codigo[df$codigo > 0], 0))
+dias <- c(
+  as.Date("2023-11-14"),
+  as.Date(df$dia[df$codigo > 0]),
+  as.Date(Sys.Date()) + 30
+)
+codigo <- cumsum(c(0, df$codigo[df$codigo > 0], 0))
 
 min_dias <- min(dias)
 max_dias <- max(dias)
@@ -42,7 +46,7 @@ if (max_codigo >= 7) {
     y = c(0, 7, y, 0),
     col = adjustcolor("yellow3", alpha.f = 0.5)
   )
-  if (max_codigo >= 23) {
+  if (max_codigo > 23) {
     a <- b
     x <- dias[codigo > 23]
     b <- max(x)
@@ -62,6 +66,7 @@ abline(h = 23, col = "yellow3", lty = 2)
 abline(h = 28, col = "red", lty = 2)
 
 abline(v = as.Date(Sys.Date()), col = "black")
+abline(v = as.Date("2023-11-27"), col = "black", lty = 4)
 abline(v = as.Date("2023-12-27"), col = "black", lty = 4)
 abline(v = as.Date("2024-01-27"), col = "black", lty = 4)
 

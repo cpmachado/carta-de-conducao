@@ -6,10 +6,10 @@ As minhas notas e progresso enquanto tiro a carta de condução.
 
 | Categorias | Progresso | Alvo | Relativo | Completo |
 | :--------- | --------: | ---: | -------: | :------: |
-| Código     | 23        | 28   | 75.0%    | FALSE    |
-| Condução   | 11        | 32   | 34.4%    | FALSE    |
+| Código     | 22        | 28   | 78.6%    | FALSE    |
+| Condução   | 16        | 32   | 50.0%    | FALSE    |
 
-Média de progresso: 54.7%
+Média de progresso: 64.3%
 
 ## Gráfico
 

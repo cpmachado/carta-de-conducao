@@ -1,7 +1,11 @@
 df <- read.csv(file.path("data", "aulas.csv"))
 
-dias <- c(as.Date(df$dia[df$conducao > 0]), as.Date(Sys.Date()) + 30)
-conducao <- cumsum(c(df$conducao[df$conducao > 0], 0))
+dias <- c(
+  as.Date("2023-11-14"),
+  as.Date(df$dia[df$conducao > 0]),
+  as.Date(Sys.Date()) + 30
+)
+conducao <- cumsum(c(0, df$conducao[df$conducao > 0], 0))
 
 min_dias <- min(dias)
 max_dias <- max(dias)
@@ -68,6 +72,7 @@ abline(h = 16, col = "blue", lty = 2)
 abline(h = 32, col = "blue4", lty = 2)
 
 abline(v = as.Date(Sys.Date()), col = "black")
+abline(v = as.Date("2023-11-27"), col = "black", lty = 4)
 abline(v = as.Date("2023-12-27"), col = "black", lty = 4)
 abline(v = as.Date("2024-01-27"), col = "black", lty = 4)
 
