@@ -2,10 +2,9 @@ df <- read.csv(file.path("data", "aulas.csv"))
 
 dias <- c(
   as.Date("2023-11-14"),
-  as.Date(df$dia[df$codigo > 0]),
-  as.Date(Sys.Date()) + 30
+  as.Date(df$dia[df$codigo > 0])
 )
-codigo <- cumsum(c(0, df$codigo[df$codigo > 0], 0))
+codigo <- cumsum(c(0, df$codigo[df$codigo > 0]))
 
 min_dias <- min(dias)
 max_dias <- max(dias)
