@@ -64,15 +64,13 @@ abline(h = 7, col = "green", lty = 2)
 abline(h = 23, col = "yellow3", lty = 2)
 abline(h = 28, col = "red", lty = 2)
 
-abline(v = as.Date(Sys.Date()), col = "black")
 abline(v = as.Date("2023-11-27"), col = "black", lty = 4)
 abline(v = as.Date("2023-12-27"), col = "black", lty = 4)
-abline(v = as.Date("2024-01-27"), col = "black", lty = 4)
 
 legend(
   x = "left",
-  legend = c("Código Verdes", "Código Amarelas", "Código Vermelhas", "Actual"),
-  col = c("green", "yellow3", "red", "black"),
+  legend = c("Código Verdes", "Código Amarelas", "Código Vermelhas"),
+  col = c("green", "yellow3", "red"),
   lty = 1,
   lwd = 1
 )
