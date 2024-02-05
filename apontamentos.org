@@ -1,0 +1,27 @@
+-*- mode: org; -*-
+#+STARTUP: overview
+#+title: Apontamentos
+
+* Recurso
+- título: O Código da Estrada
+  autora: Drª Virgínia Monteiro
+  isbn: 978-989-35049-1-8
+
+* Módulos
+** Segurança Rodoviária
+*** A - Perfil do condutor
+*** B - Comportamento cívico e segurança rodoviária
+*** C - A condução
+*** D - Mobilidade sustentável
+** Teoria de Condução
+*** I - Príncipios gerais do trânsito e de segurança rodoviária
+*** II - O condutor e o seu estadp físico e psicológico
+*** III - O condutor e o veículo
+*** IV - O condutor e os outros utentes da via
+*** V - O condutor, a via e outros fatores externos
+*** VI - Diversos
+** Teórico-Prático
+*** 1 - Percepção de risco I
+*** 2 - Percepção de risco II
+*** 3 - Distracção na condução
+*** 4 - eco-condução
