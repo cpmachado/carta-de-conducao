@@ -3,7 +3,7 @@ df <- read.csv(file.path("data", "aulas.csv"))
 dias <- c(
   as.Date("2023-11-14"),
   as.Date(df$dia[df$conducao > 0]),
-  as.Date(Sys.Date()) + 15
+  as.Date(Sys.Date()) + 50
 )
 conducao <- cumsum(c(0, df$conducao[df$conducao > 0], 0))
 
