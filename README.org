@@ -1,9 +1,9 @@
 #+title: carta-de-conducao
 #+author: Carlos Pinto Machado
+#+options: num:nil toc:nil
 
-
-* Codigo
-** Dados das aulas
+* carta-de-conducao
+** Código
 #+NAME:dados-aulas-codigo
 |        dia | aula |
 |------------+------|
@@ -49,10 +49,12 @@
 #+end_src
 
 #+RESULTS:
+<
+
 [[file:images/codigo.png]]
 
 
-* Condução
+** Condução
 
 #+NAME:dados-aulas-conducao
 |        dia | aula |
