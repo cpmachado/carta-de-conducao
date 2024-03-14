@@ -5,7 +5,7 @@
 
 ## Código
 
-<table id="orgc43a3f8" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org8730dbb" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -167,16 +167,14 @@
       xlab="dia", ylab="aula", main="Aulas de Código"
     )
     grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)
-    abline(h=28, col="blue")
-
-<
+    abline(h=limite, col="blue")
 
 ![img](images/codigo.png)
 
 
 ## Condução
 
-<table id="orga758be9" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org079381f" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -326,5 +324,7 @@
       xlab="dia", ylab="aula", main="Aulas de Condução"
     )
     grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)
-    abline(h=28, col="blue")
+    abline(h=limite, col="blue")
+
+![img](images/conducao.png "Gráfico das aulas de Condução")
 

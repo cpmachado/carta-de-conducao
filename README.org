@@ -31,7 +31,7 @@
 | 2024-01-20 |    0 |
 
 
-#+begin_src R :var dados=dados-aulas-codigo :tangle src/codigo.r :results file graphics :file images/codigo.png
+#+begin_src R :var dados=dados-aulas-codigo :tangle src/codigo.r :results file graphics :file images/codigo.png :exports both
   filename <- "data/codigo.csv"
   limite <- 28
   if (!exists("dados")) {
@@ -45,12 +45,11 @@
     xlab="dia", ylab="aula", main="Aulas de Código"
   )
   grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)
-  abline(h=28, col="blue")
+  abline(h=limite, col="blue")
 #+end_src
 
+#+name: Gráfico das aulas de Código
 #+RESULTS:
-<
-
 [[file:images/codigo.png]]
 
 
@@ -80,7 +79,7 @@
 | 2024-04-12 |    2 |
 | 2024-04-13 |    0 |
 
-#+begin_src R :var dados=dados-aulas-conducao :tangle src/conducao.r :results file graphics :file images/conducao.png
+#+begin_src R :var dados=dados-aulas-conducao :tangle src/conducao.r :results file graphics :file images/conducao.png :exports both
   filename <- "data/conducao.csv"
   limite <- 32
   if (!exists("dados")) {
@@ -94,8 +93,9 @@
     xlab="dia", ylab="aula", main="Aulas de Condução"
   )
   grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)
-  abline(h=28, col="blue")
+  abline(h=limite, col="blue")
 #+end_src
 
+#+CAPTION: Gráfico das aulas de Condução
 #+RESULTS:
 [[file:images/conducao.png]]
