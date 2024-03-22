@@ -5,7 +5,7 @@
 
 ## Código
 
-<table id="org8730dbb" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgd90123b" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -174,7 +174,7 @@
 
 ## Condução
 
-<table id="org079381f" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgc8ad696" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -276,12 +276,6 @@
 
 <tr>
 <td class="org-right">2024-03-15</td>
-<td class="org-right">2</td>
-</tr>
-
-
-<tr>
-<td class="org-right">2024-03-22</td>
 <td class="org-right">2</td>
 </tr>
 
