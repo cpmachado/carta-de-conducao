@@ -19,7 +19,9 @@ dados <- local({
 \"2024-04-08\"	\"1\"
 \"2024-04-10\"	\"1\"
 \"2024-04-12\"	\"2\"
-\"2024-04-13\"	\"0\""
+\"2024-04-23\"	\"2\"
+\"2024-05-02\"	\"2\"
+\"2024-05-03\"	\"2\""
      )
      res <- utils::read.table(
        con,
@@ -40,7 +42,7 @@ dados <- transform(dados, Ni=cumsum(dados$aula))
 plot(
   dados$Ni,x=as.Date(dados$dia),
   xaxs="i", yaxs="i",
-  type="s", ylim=c(0, limite + 1),
+  type="S", ylim=c(0, limite + 1),
   xlab="dia", ylab="aula", main="Aulas de Condução"
 )
 grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)

@@ -43,7 +43,7 @@ dados <- transform(dados, Ni=cumsum(dados$aula))
 plot(
   dados$Ni,x=as.Date(dados$dia),
   xaxs="i", yaxs="i",
-  type="s", ylim=c(0, limite + 1),
+  type="S", ylim=c(0, limite + 1),
   xlab="dia", ylab="aula", main="Aulas de Código"
 )
 grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)

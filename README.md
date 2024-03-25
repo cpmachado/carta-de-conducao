@@ -5,7 +5,7 @@
 
 ## Código
 
-<table id="orgd90123b" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org08a8905" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -163,7 +163,7 @@
     plot(
       dados$Ni,x=as.Date(dados$dia),
       xaxs="i", yaxs="i",
-      type="s", ylim=c(0, limite + 1),
+      type="S", ylim=c(0, limite + 1),
       xlab="dia", ylab="aula", main="Aulas de Código"
     )
     grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)
@@ -174,7 +174,7 @@
 
 ## Condução
 
-<table id="orgc8ad696" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org07506fb" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -299,8 +299,20 @@
 
 
 <tr>
-<td class="org-right">2024-04-13</td>
-<td class="org-right">0</td>
+<td class="org-right">2024-04-23</td>
+<td class="org-right">2</td>
+</tr>
+
+
+<tr>
+<td class="org-right">2024-05-02</td>
+<td class="org-right">2</td>
+</tr>
+
+
+<tr>
+<td class="org-right">2024-05-03</td>
+<td class="org-right">2</td>
 </tr>
 </tbody>
 </table>
@@ -314,7 +326,7 @@
     plot(
       dados$Ni,x=as.Date(dados$dia),
       xaxs="i", yaxs="i",
-      type="s", ylim=c(0, limite + 1),
+      type="S", ylim=c(0, limite + 1),
       xlab="dia", ylab="aula", main="Aulas de Condução"
     )
     grid(nx = as.numeric(difftime(max(dados$dia), min(dados$dia), unit = "days")) + 1, lty=1, lwd=1)
